@@ -51,8 +51,8 @@ public class Cat {
 
 	@Override
 	public String toString() {
-		return "Cat [name=" + name + ", age=" + age + ", weight=" + weight + "kg" + ", runSpeed=" + runSpeed + "km/h"
-				+ "]";
+		return "Cat [name=" + name + ", age=" + age + ", weight=" + weight 
+				+ "kg" + ", runSpeed=" + runSpeed + "km/h" + "]";
 	}
 
 }
