@@ -4,19 +4,11 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Triangle triangleOne = new Triangle();
-		triangleOne.setSideOne(3.4);
-		triangleOne.setSideTwo(5);
-		triangleOne.setSideThree(7.5);
+		Triangle triangleOne = new Triangle(3.4, 5, 7.5);
+		Triangle triangleTwo = new Triangle(6, 3.3, 7);
 		
-		System.out.println(triangleOne.areaOfTriangle());
-
-		Triangle triangleTwo = new Triangle();
-		triangleTwo.setSideOne(6);
-		triangleTwo.setSideTwo(3.3);
-		triangleTwo.setSideThree(7);
-		
-		System.out.println(triangleTwo.areaOfTriangle());
+		System.out.println("Area of triangleOne: " + triangleOne.triangleArea());
+		System.out.println("Area of triangleTwo: " + triangleTwo.triangleArea());
 
 	}
 
