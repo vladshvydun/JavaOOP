@@ -1,41 +1,77 @@
 package com.gmail.vladshvydyun;
 
 public class Phone {
-	private int number;
+	private String number;
 	private String model;
-	private String networkName;
+	private String color;
 
 	public Phone() {
 		super();
 	}
 
-	public Phone(int number, String model) {
+	public Phone(String number, String model, String color) {
 		super();
 		this.number = number;
 		this.model = model;
-		this.networkName = " ";
+		this.color = color;
 	}
 
-	public int getNumber() {
+	public String getNumber() {
 		return number;
 	}
 
-	public void setNetworkName(String networkName) {
-		this.networkName = networkName;
+	public void setNumber(String number) {
+		this.number = number;
 	}
 
-	public void regInNetwork(Network kievstar) {
-		kievstar.regPhone(this);
+	public String getModel() {
+		return model;
 	}
 
-	public String call(int num, Network kievstar) {
-		System.out.println(kievstar.call(num));
-		return kievstar.call(num);
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public static void registration(Phone phone) {
+		Network.registration(phone);
+	}
+
+	public void call(String number) {
+		System.out.println();
+		System.out.println("Calling from " + this.number + " to number " + number);
+		incomingCall(number, this.number);
+
+	}
+
+	public static void incomingCall(String number, String incomingNumber) {
+		if ((Network.checkRegistration(number) != null) && 
+				(Network.checkRegistration(incomingNumber) != null) && 
+				(Network.checkRegistration(number) != 
+				Network.checkRegistration(incomingNumber))) {
+			
+			System.out.println("Connection successfull.");
+			System.out.println();
+			System.out.println("Incoming call from " + number + 
+								" to your number " + incomingNumber);
+			
+		} else {
+			System.out.println("You typed the wrong number.");
+		}
 	}
 
 	@Override
 	public String toString() {
-		return "Phone [number=" + number + ", model=" + model + ", networkName=" + networkName + "]";
+		return "Phone [number=" + number + ", model=" + model + ", color=" + color + "]";
 	}
+	
+	
 
 }

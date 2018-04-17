@@ -1,36 +1,45 @@
 package com.gmail.vladshvydyun;
 
 public class Network {
-	private String networkName;
-	private int networkSize;
-	private int count;
-	private Phone[] netArray;
+	private static Phone[] phoneBase = new Phone[20];
 
 	public Network() {
 		super();
 	}
 
-	public Network(String networkName, int networkSize) {
+	public Network(Phone[] phones) {
 		super();
-		this.networkName = networkName;
-		this.networkSize = networkSize;
-		netArray = new Phone[networkSize];
-		count = 0;
+		this.phoneBase = phones;
 	}
 
-	public void regPhone(Phone phone) {
-		netArray[count] = phone;
-		phone.setNetworkName(networkName);
-		count++;
+	public Phone[] getPhones() {
+		return phoneBase;
 	}
 
-	public String call(int num) {
-		for (int i = 0; i < netArray.length; i++) {
-			if (netArray[i].getNumber() == num) {
-				return "there is a connection " + netArray[i].toString();
+	public void setPhones(Phone[] phones) {
+		this.phoneBase = phones;
+	}
+
+	public static void registration(Phone phone) {
+		for (int i = 0; i < phoneBase.length; i++) {
+			if (phoneBase[i] == null) {
+				phoneBase[i] = phone;
+				System.out.println(phone.getNumber() + 
+						" number register in network successfully!");
+				break;
 			}
 		}
-		return "wrong number";
+	}
+
+	public static Phone checkRegistration(String number) {
+		for (int i = 0; i < phoneBase.length; i++) {
+			if (phoneBase[i] != null) {
+				if (number.equals(phoneBase[i].getNumber())) {
+					return phoneBase[i];
+				}
+			}
+		}
+		return null;
 	}
 
 }
