@@ -71,7 +71,4 @@ public class Phone {
 	public String toString() {
 		return "Phone [number=" + number + ", model=" + model + ", color=" + color + "]";
 	}
-	
-	
-
 }
