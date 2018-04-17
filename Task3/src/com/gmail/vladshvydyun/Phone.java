@@ -60,7 +60,7 @@ public class Phone {
 			System.out.println("Connection successfull.");
 			System.out.println();
 			System.out.println("Incoming call from " + number + 
-								" to your number " + incomingNumber);
+					" to your number " + incomingNumber);
 			
 		} else {
 			System.out.println("You typed the wrong number.");
