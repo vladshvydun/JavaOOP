@@ -45,4 +45,10 @@ public class Triangle {
 		return Math.sqrt((p * (p - sideOne) * (p - sideTwo) * (p - sideThree)));
 	}
 
+	@Override
+	public String toString() {
+		return "Triangle [sideOne=" + sideOne + ", sideTwo=" + sideTwo + ", sideThree=" + sideThree + "]";
+	}
+	
+
 }
