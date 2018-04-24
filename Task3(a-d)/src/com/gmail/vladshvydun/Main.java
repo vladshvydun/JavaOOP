@@ -36,7 +36,8 @@ public class Main {
 		group.deleteStudent(student2);
 
 		System.out.println();
-		System.out.println("Searched: " + group.searchStudent("Red"));;
+		System.out.println("Searched: " + group.searchStudent("Red"));
+		;
 
 		System.out.println(group);
 
