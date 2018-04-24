@@ -62,7 +62,7 @@ public class Rеctangle extends Shape {
 
 	@Override
 	public String toString() {
-		return "Rhombus [a=" + a + ", b=" + b + ", c=" + c + ", d=" + d + "]";
+		return "Rеctangle [a=" + a + ", b=" + b + ", c=" + c + ", d=" + d + "]";
 	}
 
 }
