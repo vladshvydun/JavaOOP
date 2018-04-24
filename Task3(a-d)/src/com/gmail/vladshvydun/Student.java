@@ -12,7 +12,7 @@ public class Student extends Human {
 
 	public Student(String name, String lastName, int age) {
 		super(name, lastName, age);
-	}
+	} 
 
 	public int getCredit() {
 		return credit;
@@ -32,8 +32,8 @@ public class Student extends Human {
 
 	@Override
 	public void humanInfo() {
-		System.out.println(getName() + getLastName() + " is " + getAge() + " years old, " + 
-					" credit number: " + getCredit() + ", study at " + getCourse() + " course.");
+		System.out.println(getName() + getLastName() + " is " + getAge() + " years old, " + " credit number: "
+				+ getCredit() + ", study at " + getCourse() + " course.");
 		super.humanInfo();
 	}
 

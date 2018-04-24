@@ -18,7 +18,7 @@ public class Human {
 
 	public String getName() {
 		return name;
-	}
+	} 
 
 	public void setName(String name) {
 		this.name = name;
@@ -39,7 +39,7 @@ public class Human {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
+
 	public void humanInfo() {
 		System.out.println(getName() + getLastName() + " is " + getAge() + "years old");
 	}

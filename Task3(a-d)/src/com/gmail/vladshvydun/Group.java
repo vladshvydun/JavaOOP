@@ -28,7 +28,7 @@ public class Group {
 		if (student == null) {
 			throw new IllegalArgumentException("Null student");
 		}
-		for (int i = 0; i < studentsArray.length; i++)  {
+		for (int i = 0; i < studentsArray.length; i++) {
 			if (studentsArray[i] == null) {
 				studentsArray[i] = student;
 				System.out.println(student.getName() + " " + student.getLastName() + " added to group.");
@@ -49,11 +49,11 @@ public class Group {
 				}
 			}
 		}
-	}
+	} 
 
 	public Student searchStudent(String lastName) {
 		for (Student student : studentsArray) {
-			if(student != null && student.getLastName().equals(lastName)) {
+			if (student != null && student.getLastName().equals(lastName)) {
 				return student;
 			}
 		}

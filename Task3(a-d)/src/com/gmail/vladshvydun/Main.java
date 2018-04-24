@@ -17,7 +17,7 @@ public class Main {
 		Student student10 = new Student("Ivan", "Khomen", 22, 234235, 5);
 		Student student11 = new Student("Nastya", "Getman", 23, 324235, 3);
 
-		try {
+		try { 
 			group.addStudent(student1);
 			group.addStudent(student2);
 			group.addStudent(student3);
