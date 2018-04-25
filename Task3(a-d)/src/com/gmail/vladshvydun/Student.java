@@ -12,7 +12,7 @@ public class Student extends Human {
 
 	public Student(String name, String lastName, int age) {
 		super(name, lastName, age);
-	} 
+	}
 
 	public int getCredit() {
 		return credit;
@@ -35,6 +35,16 @@ public class Student extends Human {
 		System.out.println(getName() + getLastName() + " is " + getAge() + " years old, " + " credit number: "
 				+ getCredit() + ", study at " + getCourse() + " course.");
 		super.humanInfo();
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		Student student = (Student) obj;
+
+		if (this.getName().equals(student.getName()) && this.getLastName().equals(student.getLastName())) {
+			return true;
+		}
+		return false;
 	}
 
 	@Override
