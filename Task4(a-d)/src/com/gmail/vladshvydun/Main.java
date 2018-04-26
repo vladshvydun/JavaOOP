@@ -1,22 +1,23 @@
 package com.gmail.vladshvydun;
 
+import java.util.Arrays;
+
 public class Main {
 
 	public static void main(String[] args) {
 		Group group = new Group();
 
-		Student student1 = new Student("Vladislav", "Shvy", 23, 64738, 5);
-		Student student2 = new Student("Ruslan", "Panf", 22, 23843, 1);
-		Student student3 = new Student("Elina", "Red", 20, 80943, 3);
-		Student student4 = new Student("Vika", "Ivanchenko", 22, 45643, 4);
-		Student student5 = new Student("Dima", "Dub", 23, 23423, 6);
-		Student student6 = new Student("Roman", "Golobor", 19, 527234, 1);
-		Student student7 = new Student("Alex", "Lisborn", 18, 234516, 2);
-		Student student8 = new Student("Sergei", "Nazarenko", 21, 45637, 4);
-		Student student9 = new Student("Andrey", "Vasilen", 21, 86445, 5);
-		Student student10 = new Student("Ivan", "Khomen", 22, 234235, 5);
-		Student student11 = new Student("Nastya", "Getman", 23, 324235, 3);
-		Student student12 = new Student();
+		Student student1 = new Student("Vladislav", "Shvy", 23, 64738, 5, "male");
+		Student student2 = new Student("Ruslan", "Panf", 22, 23843, 1, "male");
+		Student student3 = new Student("Elina", "Red", 20, 80943, 3, "female");
+		Student student4 = new Student("Vika", "Ivanchenko", 22, 45643, 4, "female");
+		Student student5 = new Student("Dima", "Dub", 23, 23423, 6, "male");
+		Student student6 = new Student("Roman", "Golobor", 19, 527234, 1, "male");
+		Student student7 = new Student("Alex", "Lisborn", 18, 234516, 2, "male");
+		Student student8 = new Student("Sergei", "Nazarenko", 21, 45637, 4, "male");
+		Student student9 = new Student("Andrey", "Vasilen", 21, 86445, 5, "male");
+		Student student10 = new Student("Ivan", "Khomen", 22, 234235, 5, "male");
+		Student student11 = new Student("Nastya", "Getman", 23, 324235, 3, "female");
 
 		try {
 			group.addStudent(student1);
@@ -38,12 +39,10 @@ public class Main {
 
 		group.deleteStudent(student2);
 
-		
 		System.out.println();
 		System.out.println("Searched: " + group.searchStudent("Red"));
-		
-
-		System.out.println(group);
+		System.out.println();
+		System.out.println(Arrays.toString(group.readyForArmy()));
 
 	}
 

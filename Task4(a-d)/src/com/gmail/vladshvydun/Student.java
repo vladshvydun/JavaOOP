@@ -4,14 +4,14 @@ public class Student extends Human {
 	private int credit;
 	private int course;
 
-	public Student(String name, String lastName, int age, int credit, int course) {
-		super(name, lastName, age);
+	public Student(String name, String lastName, int age, int credit, int course, String sex) {
+		super(name, lastName, age, sex);
 		this.credit = credit;
 		this.course = course;
 	}
 
-	public Student(String name, String lastName, int age) {
-		super(name, lastName, age);
+	public Student(String name, String lastName, int age, String sex) {
+		super(name, lastName, age, sex);
 	} 
 
 	public Student() {
@@ -36,7 +36,7 @@ public class Student extends Human {
 
 	@Override
 	public void humanInfo() {
-		System.out.println(getName() + getLastName() + " is " + getAge() + " years old, " + " credit number: "
+		System.out.println(getName() + getLastName() + " is " + getSex() + " " + getAge() + " years old, " + " credit number: "
 				+ getCredit() + ", study at " + getCourse() + " course.");
 		super.humanInfo();
 	}

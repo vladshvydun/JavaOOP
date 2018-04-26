@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 import com.gmail.vladshvydun.MyException;
 
-public class Group {
+public class Group implements Voenkom {
 	private Student[] studentsArray = new Student[15];
 	Scanner scanner = new Scanner(System.in);
 
@@ -114,20 +114,26 @@ public class Group {
 		}
 		return null;
 	}
-	
-//	public void readyForArmy(Voenkom prizyv) {
-//		int arraySize = 1;
-//		Student[] voenkomArray = new Student[arraySize];
-//		
-//		for (int i = 0; i < voenkomArray.length; i++) {
-//			for (int j = 0; j < voenkomArray.length; j++) {
-//				if(studentsArray[j].getAge() > 18) {
-//					voenkomArray[i] = this.student;
-//				}
-//			}
-//		}
-//		
-//	}
+
+	@Override
+	public Student[] readyForArmy() {
+		int size = 0;
+		for (Student student : studentsArray) {
+			if (student != null && student.getSex().equals("male") && student.getAge() >= 18) {
+				size++;
+			}
+		}
+
+		Student[] voenkomArray = new Student[size];
+		int i = 0;
+		for (Student student : this.studentsArray) {
+			if (student != null && student.getSex().equals("male") && student.getAge() >= 18) {
+				voenkomArray[i] = student;
+				i++;
+			}
+		}
+		return voenkomArray;
+	}
 
 	@Override
 	public String toString() {
@@ -139,5 +145,4 @@ public class Group {
 		}
 		return out;
 	}
-
 }
