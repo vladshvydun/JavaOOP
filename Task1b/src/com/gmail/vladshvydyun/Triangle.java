@@ -7,7 +7,7 @@ public class Triangle {
 
 	public Triangle() {
 		super();
-	}
+	} 
 
 	public Triangle(double sideOne, double sideTwo, double sideThree) {
 		super();
@@ -49,6 +49,5 @@ public class Triangle {
 	public String toString() {
 		return "Triangle [sideOne=" + sideOne + ", sideTwo=" + sideTwo + ", sideThree=" + sideThree + "]";
 	}
-	
 
 }
