@@ -37,7 +37,7 @@ public class Main {
 
 		// group.interactiveAddStudent(student12);
 
-		group.deleteStudent(student2);
+		group.deleteStudent(45643);
 
 		System.out.println();
 		System.out.println("Searched: " + group.searchStudent("Red"));

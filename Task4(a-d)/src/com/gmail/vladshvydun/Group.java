@@ -1,6 +1,5 @@
 package com.gmail.vladshvydun;
 
-import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -93,18 +92,33 @@ public class Group implements Voenkom {
 		throw new MyException();
 	}
 
-	public void deleteStudent(Student student) {
+	@Override
+	public boolean equals(Object obj) {
+		if(!(obj instanceof Student)) {
+			return false;
+		}
+		Student student = (Student) obj;
+ 		return student.equals(obj);
+	}
+
+	@Override
+	public int hashCode() {
+
+		return this.hashCode();
+	}
+
+	public boolean deleteStudent(long number) { 
 		for (int i = 0; i < studentsArray.length; i++) {
-			if (studentsArray[i] != null) {
-				if (studentsArray[i].equals(student)) {
-					studentsArray[i] = null;
-					System.out.println();
-					System.out.println(student.getName() + " " + student.getLastName() + " deleted from group.");
-					break;
-				}
+			if(studentsArray[i] != null && studentsArray[i].getCredit() == number) {
+				System.out.println();
+				System.out.println(studentsArray[i].getName() + " " + 
+						studentsArray[i].getLastName() + " is deleted from group.");
+				studentsArray[i] = null;
+				return true;
 			}
 		}
-	}
+		return false;
+	} 
 
 	public Student searchStudent(String lastName) {
 		for (Student student : studentsArray) {
@@ -128,8 +142,7 @@ public class Group implements Voenkom {
 		int i = 0;
 		for (Student student : this.studentsArray) {
 			if (student != null && student.getSex().equals("male") && student.getAge() >= 18) {
-				voenkomArray[i] = student;
-				i++;
+				voenkomArray[i++] = student;
 			}
 		}
 		return voenkomArray;
