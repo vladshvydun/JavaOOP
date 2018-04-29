@@ -33,7 +33,7 @@ public class Main {
 			System.out.println(e.getMessage());
 		}
 
-		group.deleteStudent(student2);
+		group.deleteStudent(23843);
 
 		System.out.println();
 		System.out.println("Searched: " + group.searchStudent("Red"));

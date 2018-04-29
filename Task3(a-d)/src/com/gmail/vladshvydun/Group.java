@@ -20,10 +20,6 @@ public class Group {
 		return studentsArray;
 	}
 
-	public void setStudentsArray(Student[] studentsArray) {
-		this.studentsArray = studentsArray;
-	}
-
 	public void addStudent(Student student) throws MyException {
 		if (student == null) {
 			throw new IllegalArgumentException("Null student");
@@ -38,17 +34,17 @@ public class Group {
 		throw new MyException();
 	}
 
-	public void deleteStudent(Student student) {
+	public boolean deleteStudent(long number) { 
 		for (int i = 0; i < studentsArray.length; i++) {
-			if (studentsArray[i] != null) {
-				if (studentsArray[i].equals(student)) {
-					studentsArray[i] = null;
-					System.out.println();
-					System.out.println(student.getName() + " " + student.getLastName() + " deleted from group.");
-					break;
-				}
+			if(studentsArray[i] != null && studentsArray[i].getCredit() == number) {
+				System.out.println();
+				System.out.println(studentsArray[i].getName() + " " + 
+						studentsArray[i].getLastName() + " is deleted from group.");
+				studentsArray[i] = null;
+				return true;
 			}
 		}
+		return false;
 	} 
 
 	public Student searchStudent(String lastName) {
