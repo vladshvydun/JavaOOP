@@ -22,11 +22,21 @@ public class Desk {
 		this.deskArray = deskArray;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if(!(obj instanceof Shape)) return false;
+		return this.equals(obj);
+	}
+	
+	@Override
+	public int hashCode() {
+		return this.hashCode();
+	}
+
 	public void addShape(Shape shape) {
 		for (int i = 0; i < deskArray.length; i++) {
 			if (deskArray[i] == null) {
 				deskArray[i] = shape;
-
 				System.out.println("Shape added to desk");
 				break;
 			}
@@ -36,10 +46,10 @@ public class Desk {
 	public void deleteShape(Shape shape) {
 		for (int i = 0; i < deskArray.length; i++) {
 			if (deskArray[i] != null) {
-				if (deskArray[i].equals(shape)) {
+				if (deskArray[i] == shape) {
 					deskArray[i] = null;
 					System.out.println();
-					System.out.println("Shape deleted from desk");
+					System.out.println(shape + " deleted from desk");
 					break;
 				}
 			}
