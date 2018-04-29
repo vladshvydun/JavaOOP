@@ -8,7 +8,7 @@ public class Cat {
 
 	public Cat() {
 		super();
-	}
+	} 
 
 	public Cat(String name, int age, int weight) {
 		super();
