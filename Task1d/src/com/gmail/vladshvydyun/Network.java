@@ -10,7 +10,7 @@ public class Network {
 	public Network(Phone[] phones) {
 		super();
 		this.phoneBase = phones;
-	}
+	} 
 
 	public Phone[] getPhones() {
 		return phoneBase;
