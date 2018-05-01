@@ -7,7 +7,7 @@ import com.gmail.vladshvydun.MyException;
 
 public class Group implements Voenkom {
 	private Student[] studentsArray = new Student[15];
-	Scanner scanner = new Scanner(System.in);
+	private Scanner scanner = new Scanner(System.in);
 
 	public Group(Student[] studentsArray) {
 		super();
