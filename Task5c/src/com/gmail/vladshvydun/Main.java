@@ -43,7 +43,7 @@ public class Main {
 		System.out.println("Searched: " + group.searchStudent("Red"));
 		System.out.println();
 		System.out.println(Arrays.toString(group.readyForArmy()));
-		
+		 
 	}
 
 }
