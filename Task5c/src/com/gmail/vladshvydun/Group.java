@@ -93,14 +93,18 @@ public class Group implements Voenkom {
 			if (studentsArray[i] == null) {
 				studentsArray[i] = student;
 				System.out.println(student.getName() + " " + student.getLastName() + " added to group.");
-				addStudentsToFile();
+				try {
+					addStudentsToFile();
+				} catch (FileNotFoundException e) {
+					e.printStackTrace();
+				}
 				return;
 			}
 		}
 		throw new MyException();
 	}
 
-	public void addStudentsToFile() {
+	public void addStudentsToFile() throws FileNotFoundException {
 		try (PrintWriter pw = new PrintWriter("group.txt")) {
 			for (int i = 0, lenOne = studentsArray.length; i < lenOne; i++) {
 				if (studentsArray[i] != null) {
@@ -113,7 +117,6 @@ public class Group implements Voenkom {
 			e.printStackTrace();
 		}
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
