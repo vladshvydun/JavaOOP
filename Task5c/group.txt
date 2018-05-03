@@ -1,0 +1,11 @@
+Vladislav, Shvy, 23, 64738, 5, male
+Ruslan, Panf, 22, 23843, 1, male
+Elina, Red, 20, 80943, 3, female
+Vika, Ivanchenko, 22, 45643, 4, female
+Dima, Dub, 23, 23423, 6, male
+Roman, Golobor, 19, 527234, 1, male
+Alex, Lisborn, 18, 234516, 2, male
+Sergei, Nazarenko, 21, 45637, 4, male
+Andrey, Vasilen, 21, 86445, 5, male
+Ivan, Khomen, 22, 234235, 5, male
+Nastya, Getman, 23, 324235, 3, female
