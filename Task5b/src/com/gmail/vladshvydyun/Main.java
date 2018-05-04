@@ -29,7 +29,7 @@ public class Main {
 					sb.append(arrayOne[i] + System.lineSeparator());
 				}
 			}
-		}
+		} 
 		return sb.toString();
 	}
 
