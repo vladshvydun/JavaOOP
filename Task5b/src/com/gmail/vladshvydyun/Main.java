@@ -13,25 +13,29 @@ public class Main {
 		File fileOne = new File("fileOne.txt");
 		File fileTwo = new File("fileTwo.txt");
 
-		equalsStrings(fileOne, fileTwo);
+		printIntoFile(equalsStrings(fileOne, fileTwo));
 	}
 
-	public static File equalsStrings(File one, File two) {
+	public static String equalsStrings(File one, File two) {
 		String fileOneText = loadFromFile(new File(one.getPath()));
 		String[] arrayOne = fileOneText.split(" ");
 		String fileTwoText = loadFromFile(new File(two.getPath()));
 		String[] arrayTwo = fileTwoText.split(" ");
 
-		try (PrintWriter pw = new PrintWriter("getFile.txt")) {
-			int count = 1;
-			for (int i = 0, lenOne = arrayOne.length; i < lenOne; i++) {
-				for (int j = 0, lenTwo = arrayTwo.length; j < lenTwo; j++) {
-					if (arrayOne[i].equals(arrayTwo[j])) {
-						pw.print(count + ") " + arrayOne[i] + System.lineSeparator());
-						count++;
-					}
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0, lenOne = arrayOne.length; i < lenOne; i++) {
+			for (int j = 0, lenTwo = arrayTwo.length; j < lenTwo; j++) {
+				if (arrayOne[i].equals(arrayTwo[j])) {
+					sb.append(arrayOne[i] + System.lineSeparator());
 				}
 			}
+		}
+		return sb.toString();
+	}
+
+	public static File printIntoFile(String text) {
+		try (PrintWriter pw = new PrintWriter("getFile.txt")) {
+			pw.print(text);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
